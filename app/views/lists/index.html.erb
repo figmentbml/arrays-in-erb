@@ -1,7 +1,15 @@
-<h2>States</h2>
+<% states_cities = [["New York", ["New York City", "Albany"]], ["Connecticut", ["Stamford", "Hartford", "Norwalk"]], ["New Jersey", ["Jersey City","Trenton"]]] %>
 
-<p>Put your code here...</p>
 
-<h2>Cities</h2>
+<h2>Cities and States</h2>
 
-<p>Put your code here...</p>
+  <% states_cities.each do |state_city| %>
+<ul>
+  <li><%= state_city[0] %></li>
+    <ul>
+    <% state_city[1].each do |city| %>
+      <li><%= city %> </li>
+      <% end %>
+    </ul>
+</ul>
+<% end %>
